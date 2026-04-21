@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form-Control | Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #222222;
+      font-family: Arial, sans-serif;
+      padding: 2rem 1rem;
+    }
+
+    .form-card {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #555555;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .form-control,
+    .form-control-plaintext {
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 6px;
+      color: #222222;
+    }
+
+    .form-control:focus {
+      border-color: #888888;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
+      background-color: #ffffff;
+      color: #222222;
+    }
+
+    .form-control:disabled {
+      background-color: #eeeeee;
+      color: #888888;
+      cursor: not-allowed;
+    }
+
+    .form-control-plaintext {
+      background-color: transparent;
+      border: none;
+      color: #555555;
+    }
+
+
+    .form-check-label {
+      font-size: 0.88rem;
+    }
+
+    hr {
+      border-color: #dddddd;
+      margin: 1.5rem 0;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888888;
+      margin-bottom: 1rem;
+    }
+
+    .info-box {
+      border: 1px solid #dddddd;
+      border-radius: 6px;
+      padding: 0.9rem 1rem;
+    }
+
+    .btn-submit {
+      background-color: #222222;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem 2rem;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    .btn-submit:hover {
+      background-color: #444444;
+      color: #ffffff;
+    }
+
+    .color-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .form-control-color {
+      width: 3rem;
+      height: 2.2rem;
+      padding: 0.15rem 0.2rem;
+      border-radius: 6px;
+      border: 1px solid #cccccc;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-card">
+
+  <!-- Header -->
+  <h1 class="text-primary">Contact Form</h1>
+  <hr/>
+
+  <form>
+
+    <!-- Personal Information -->
+    <div class="section-label">Personal Information</div>
+
+    <div class="row g-3 mb-3">
+
+      <!-- Full Name (large) -->
+      <div class="col-md-6">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          class="form-control form-control-lg"
+          placeholder="e.g. Lebron Raymone James"
+          aria-label="Full Name"
+        />
+      </div>
+
+      <!-- Email Address (small) -->
+      <div class="col-md-6">
+        <label for="emailAddress" class="form-label">Email Address</label>
+        <input
+          type="email"
+          id="emailAddress"
+          class="form-control form-control-sm"
+          placeholder="lebronjames@gmail.com"
+          aria-label="Email Address"
+        />
+      </div>
+
+    </div>
+
+    <hr/>
+
+    <!-- Message -->
+    <div class="section-label">Your Message</div>
+
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea
+        id="message"
+        class="form-control"
+        placeholder="Write your message here..."
+        aria-label="Message"
+      ></textarea>
+    </div>
+
+    <hr/>
+
+    <!-- Contact Preferences -->
+    <div class="section-label">Contact Preferences</div>
+
+    <!-- Preferred Contact Method -->
+    <div class="mb-3">
+      <label class="form-label d-block">Preferred Contact Method</label>
+      <div class="d-flex flex-wrap gap-3" role="group" aria-label="Preferred Contact Method">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="contactEmail" value="email" aria-label="Email"/>
+          <label class="form-check-label" for="contactEmail">Email</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="contactPhone" value="phone" aria-label="Phone"/>
+          <label class="form-check-label" for="contactPhone">Phone</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="contactWhatsapp" value="whatsapp" aria-label="WhatsApp"/>
+          <label class="form-check-label" for="contactWhatsapp">WhatsApp</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Favorite Color -->
+    <div class="mb-3">
+      <label for="favoriteColor" class="form-label">Favorite Color</label>
+      <div class="color-row">
+        <input
+          type="color"
+          id="favoriteColor"
+          class="form-control form-control-color"
+          value="#222222"
+          aria-label="Choose your favorite color"
+          title="Choose your favorite color"
+        />
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Account Information -->
+    <div class="section-label">Account Information</div>
+
+    <div class="row g-3 mb-4">
+
+      <!-- Disabled: User ID -->
+      <div class="col-md-6">
+        <div class="info-box">
+          <label for="userId" class="form-label">User ID</label>
+          <input
+            type="text"
+            id="userId"
+            class="form-control form-control-sm"
+            value="12345"
+            disabled
+            aria-label="User ID (auto-generated)"
+          />
+        </div>
+      </div>
+
+      <!-- Read-only: Account Type -->
+      <div class="col-md-6">
+        <div class="info-box">
+          <label for="accountType" class="form-label">Account Type</label>
+          <input
+            type="text"
+            id="accountType"
+            class="form-control-plaintext form-control-sm"
+            value="Student"
+            readonly
+            aria-label="Account Type: Student"
+          />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Submit -->
+    <div class="d-flex justify-content-end">
+      <a href="#" class="btn btn-success">Submit</a>
+    </div>
+
+  </form>
+</div>
+
+</body>
+</html>
